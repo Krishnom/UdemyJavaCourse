@@ -1,4 +1,4 @@
-package excercise3;
+package exercise3;
 public class BarkingDog {
     public static boolean shouldWakeUp(boolean barking, int hourOfDay)
     {

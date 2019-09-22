@@ -1,4 +1,4 @@
-package excercise2;
+package exercise2;
 
 public class MegaBytesConverter {
     public static void printMegaBytesAndKiloBytes(int kiloBytes) {

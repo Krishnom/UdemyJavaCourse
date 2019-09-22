@@ -6,7 +6,7 @@ import org.junit.Before;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.Assert.assertEquals;
 
 public class TestHelper {
     private PrintStream sysOut;
@@ -23,7 +23,7 @@ public class TestHelper {
         System.setOut(sysOut);
     }
 
-    protected void assertSysout(String sysout){
-        assertEquals(outContent.toString().strip(),sysout);
+    protected void assertSysout(String sysout) {
+        assertEquals(outContent.toString().strip(), sysout);
     }
 }
