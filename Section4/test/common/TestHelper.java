@@ -24,6 +24,6 @@ public class TestHelper {
     }
 
     protected void assertSysout(String sysout) {
-        assertEquals(outContent.toString().strip(), sysout);
+        assertEquals(sysout, outContent.toString().strip());
     }
 }
