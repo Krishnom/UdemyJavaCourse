@@ -3,27 +3,43 @@ package common;
 import org.junit.After;
 import org.junit.Before;
 
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
+import java.io.*;
 
 import static org.junit.Assert.assertEquals;
 
 public class TestHelper {
     private PrintStream sysOut;
+    private InputStream sysIn;
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+    private ByteArrayInputStream inputContent;
 
     @Before
     public void setUpStreams() {
         sysOut = System.out;
+        sysIn = System.in;
         System.setOut(new PrintStream(outContent));
+        setInputContent("");
+        System.setIn(inputContent);
     }
 
     @After
     public void revertStreams() {
         System.setOut(sysOut);
+        System.setIn(sysIn);
     }
 
     protected void assertSysout(String sysout) {
         assertEquals(sysout, outContent.toString().strip());
+    }
+
+    //Before running tests that depends on user input, user must have to set this
+    public void setInputContent(String input) {
+        //TODO: this is not working at all. Need to fix
+        this.inputContent = new ByteArrayInputStream(input.getBytes());
+    }
+
+    //Before running tests that depends on user input, user must have to set this
+    public void setInputContent(File input) {
+        //TODO: enable setting input from file
     }
 }
