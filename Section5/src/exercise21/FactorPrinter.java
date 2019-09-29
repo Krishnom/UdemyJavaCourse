@@ -1,6 +1,6 @@
 package exercise21;
 
-public class FactorPrinter {
+class FactorPrinter {
     public static void printFactors(int num) {
         if (num < 1) {
             System.out.println("Invalid Value");

@@ -1,6 +1,6 @@
 package exercise12;
 
-public class NumberInWord {
+class NumberInWord {
 
     public static void printNumberInWord(int num) {
         switch (num) {

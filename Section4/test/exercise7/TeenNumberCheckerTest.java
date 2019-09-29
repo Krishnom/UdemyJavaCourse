@@ -20,10 +20,10 @@ public class TeenNumberCheckerTest extends ParameterizedTestHelper {
         });
     }
 
-    private int num1;
-    private int num2;
-    private int num3;
-    private boolean hasTeen;
+    private final int num1;
+    private final int num2;
+    private final int num3;
+    private final boolean hasTeen;
 
     public TeenNumberCheckerTest(int num1, int num2, int num3, boolean hasTeen) {
         this.num1 = num1;

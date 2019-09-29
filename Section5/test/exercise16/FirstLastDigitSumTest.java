@@ -21,8 +21,8 @@ public class FirstLastDigitSumTest extends ParameterizedTestHelper {
         });
     }
 
-    int num;
-    int sumOfFirstAndLast;
+    private final int num;
+    private final int sumOfFirstAndLast;
 
     public FirstLastDigitSumTest(int num, int sumOfFirstAndLast) {
         this.num = num;

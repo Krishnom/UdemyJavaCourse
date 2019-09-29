@@ -1,6 +1,6 @@
 package exercise20;
 
-public class GreatestCommonDivisor {
+class GreatestCommonDivisor {
     public static int getGreatestCommonDivisor(int num1, int num2)
     {
         if(num1 < 10 || num2 < 10)
@@ -12,7 +12,7 @@ public class GreatestCommonDivisor {
         if(num1 % num2 == 0) return num2;
         if(num2 % num1 == 0) return num1;
         
-        int min = num1 < num2 ? num1: num2;
+        int min = Math.min(num1, num2);
         int gcd = 1;
         
         for(int i = 2; i <= min /2; i++)

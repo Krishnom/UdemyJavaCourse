@@ -1,6 +1,6 @@
 package exercise10;
 
-public class IntEqualityPrinter {
+class IntEqualityPrinter {
 
     public static void printEqual(int n1, int n2, int n3) {
         if (n1 < 0 || n2 < 0 || n3 < 0) {

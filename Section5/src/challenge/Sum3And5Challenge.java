@@ -1,6 +1,6 @@
 package challenge;
 
-public class Sum3And5Challenge {
+class Sum3And5Challenge {
 
     public static void main(String[] args) {
         int sumOfAllNums = 0;

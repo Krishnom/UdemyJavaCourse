@@ -1,6 +1,6 @@
 package exercise8;
 
-public class AreaCalculator {
+class AreaCalculator {
 
     public static double area(double radius) {
         if (radius < 0) {

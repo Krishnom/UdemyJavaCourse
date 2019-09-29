@@ -1,6 +1,6 @@
 package exercise26;
 
-public class DiagonalStar {
+class DiagonalStar {
     public static void printSquareStar(int number){
         if (number >= 5) {
             for (int i = 1; i <= number; i++) {

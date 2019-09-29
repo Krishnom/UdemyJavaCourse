@@ -19,8 +19,8 @@ public class EvenDigitSumTest extends ParameterizedTestHelper {
         });
     }
 
-    int num;
-    int sumOfEvenDigits;
+    private final int num;
+    private final int sumOfEvenDigits;
 
     public EvenDigitSumTest(int num, int sumOfEvenDigits) {
         this.num = num;

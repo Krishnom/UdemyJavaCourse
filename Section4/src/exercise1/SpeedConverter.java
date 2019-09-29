@@ -1,7 +1,7 @@
 package exercise1;
 
-public class SpeedConverter {
-    static double conversionRate = 1.609;
+class SpeedConverter {
+    static final double conversionRate = 1.609;
     public static void printConversion(double kilometersPerHours) {
         if (kilometersPerHours < 0) {
             System.out.println("Invalid Value");

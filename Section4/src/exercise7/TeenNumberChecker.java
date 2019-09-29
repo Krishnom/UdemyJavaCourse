@@ -1,6 +1,6 @@
 package exercise7;
 
-public class TeenNumberChecker {
+class TeenNumberChecker {
 
     public static boolean hasTeen(int n1, int n2, int n3) {
         boolean isTeen = false;
@@ -14,7 +14,7 @@ public class TeenNumberChecker {
         return isTeen;
     }
 
-    public static boolean isTeen(int num){
+    private static boolean isTeen(int num){
         return (num <= 19 && num >=13);
     }
 }

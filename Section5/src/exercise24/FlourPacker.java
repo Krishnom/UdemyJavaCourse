@@ -1,10 +1,7 @@
 package exercise24;
 
-public class FlourPacker {
-    
-    private static int BIGKG = 5;
-    private static int SMALLKG = 1;
-    
+class FlourPacker {
+
     public static boolean canPack(int bigCount, int smallCount, int goal)//1,0,5
     {
         
@@ -15,14 +12,16 @@ public class FlourPacker {
         }
         
         //2. If maximum KG available from bags is less then goal return false
-        int maxKg = (bigCount * BIGKG) + (smallCount*SMALLKG); //maxKg = 5
+        int BIGKG = 5;
+        int SMALLKG = 1;
+        int maxKg = (bigCount * BIGKG) + (smallCount* SMALLKG); //maxKg = 5
         if(goal > maxKg){//5 > 5 //false
             return false;
         }
 
         //3. If bigCount == 0 then goal must be lesser then or equal to smallCount*SMALLKG
         if (bigCount == 0){
-            return (goal - (smallCount*SMALLKG)) <= 0;
+            return (goal - (smallCount* SMALLKG)) <= 0;
         }
         
         
@@ -40,6 +39,6 @@ public class FlourPacker {
             bigCount--;//0
         }
         
-        return remainingGoal - smallCount*SMALLKG <= 0;
+        return remainingGoal - smallCount* SMALLKG <= 0;
     }
 }

@@ -1,13 +1,10 @@
 package exercise21;
 
 import common.ParameterizedTestHelper;
-import exercise16.FirstLastDigitSum;
 import org.junit.Test;
 import org.junit.runners.Parameterized;
 
 import java.util.Arrays;
-
-import static org.junit.Assert.*;
 
 public class FactorPrinterTest extends ParameterizedTestHelper {
 
@@ -21,8 +18,8 @@ public class FactorPrinterTest extends ParameterizedTestHelper {
         });
     }
 
-    int num;
-    String expectedOutput;
+    private final int num;
+    private final String expectedOutput;
 
     public FactorPrinterTest(int num, String expectedOutput) {
         this.num = num;

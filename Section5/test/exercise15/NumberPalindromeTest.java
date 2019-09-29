@@ -18,8 +18,8 @@ public class NumberPalindromeTest extends ParameterizedTestHelper {
                 {11212,false},//isPalindrome(11212); → should return false because reverse is 21211 and that is not equal to 11212.
         });
     }
-    int num;
-    boolean isPalindrome;
+    private final int num;
+    private final boolean isPalindrome;
 
     public NumberPalindromeTest(int num, boolean isPalindrome) {
         this.num = num;

@@ -1,8 +1,8 @@
 package exercise4;
-public class LeapYear {
+class LeapYear {
 
     public static boolean isLeapYear(int year){
-        boolean leapYear = false;
+        boolean leapYear;
         boolean divisibleBy4 = (year % 4 == 0);
         boolean divisibleBy100 = (year % 100 == 0);
         boolean divisibleBy400 = (year % 400 == 0);

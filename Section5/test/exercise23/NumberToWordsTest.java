@@ -1,10 +1,7 @@
 package exercise23;
 
-import common.ParameterizedTestHelper;
 import common.TestHelper;
-import exercise12.NumberInWord;
 import org.junit.Test;
-import org.junit.runners.Parameterized;
 
 import static org.junit.Assert.*;
 

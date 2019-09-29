@@ -1,6 +1,6 @@
 package exercise25;
 
-public class LargestPrime {
+class LargestPrime {
 
     public static int getLargestPrime(int num) {
         //no prime factor for 1, 0 and negative numbers
@@ -24,6 +24,7 @@ public class LargestPrime {
                 for (int j = 2; j <= i / 2; j++) {
                     if (i % j == 0) {
                         isPrime = false;
+                        break;
                     }
                 }
                 //if i is prime then update largestPrime

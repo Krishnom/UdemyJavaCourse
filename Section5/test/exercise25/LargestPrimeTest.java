@@ -24,8 +24,8 @@ public class LargestPrimeTest extends ParameterizedTestHelper {
     }
 
 
-    int num;
-    int largestPrimeFactor;
+    private final int num;
+    private final int largestPrimeFactor;
 
     public LargestPrimeTest(int num, int largestPrimeFactor) {
         this.num = num;

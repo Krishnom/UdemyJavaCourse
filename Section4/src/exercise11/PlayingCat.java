@@ -1,6 +1,6 @@
 package exercise11;
 
-public class PlayingCat {
+class PlayingCat {
 
     public static boolean isCatPlaying(boolean isSummer, int temp)
     {

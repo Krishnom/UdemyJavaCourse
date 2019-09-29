@@ -1,6 +1,6 @@
 package challenge;
 
-public class DayOfTheWeek {
+class DayOfTheWeek {
     public static void printDayOfWeekUsingSwitchCase(int day) {
         //0 = sunday,6=saturday
         switch (day) {

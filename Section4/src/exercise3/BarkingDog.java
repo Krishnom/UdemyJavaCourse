@@ -1,8 +1,8 @@
 package exercise3;
-public class BarkingDog {
+class BarkingDog {
     public static boolean shouldWakeUp(boolean barking, int hourOfDay)
     {
-        boolean wakeUp = false;
+        boolean wakeUp;
 
         if(hourOfDay < 0 || hourOfDay > 23){
             wakeUp = false;

@@ -21,12 +21,12 @@ public class AreaCalculatorTest {
         assertEquals(-1.0, AreaCalculator.area(-1));
     }
 
-    @Test public void areaOfRactangleIsReturnedWhenTwoParameterIsPassed(){
+    @Test public void areaOfRectangleIsReturnedWhenTwoParameterIsPassed(){
         assertEquals(20.0, AreaCalculator.area(5.0,4.0));
     }
 
 
-    @Test public void negativeAreaOfRactangleWhenParametersAreInvalid(){
+    @Test public void negativeAreaOfRectangleWhenParametersAreInvalid(){
         assertEquals(-1.0, AreaCalculator.area(-1.0,4.0));
     }
 

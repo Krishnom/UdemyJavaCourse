@@ -1,6 +1,6 @@
 package exercise23;
 
-public class NumberToWords {
+class NumberToWords {
     public static void numberToWords(int num) {
         if (num < 0) {
             System.out.println("Invalid Value");

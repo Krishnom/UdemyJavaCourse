@@ -9,10 +9,10 @@ import java.util.Arrays;
 import static org.junit.Assert.assertEquals;
 
 public class EqualSumCheckerTest extends ParameterizedTestHelper {
-    private int val1;
-    private int val2;
-    private int sum;
-    private boolean isEqual;
+    private final int val1;
+    private final int val2;
+    private final int sum;
+    private final boolean isEqual;
 
     @Parameterized.Parameters(name = "Test{index} {0}+{1}={2} is {3}")
     public static Iterable<Object[]> data() {

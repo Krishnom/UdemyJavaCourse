@@ -22,9 +22,9 @@ public class SumOddRangeTest extends ParameterizedTestHelper {
         });
     }
 
-    private int firstNum;
-    private int lastNum;
-    private int sumOfOdds;
+    private final int firstNum;
+    private final int lastNum;
+    private final int sumOfOdds;
 
     public SumOddRangeTest(int firstNum, int lastNum, int sumOfOdds) {
         this.firstNum = firstNum;

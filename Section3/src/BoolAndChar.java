@@ -1,4 +1,4 @@
-public class BoolAndChar {
+class BoolAndChar {
 
     public static void main(String[] args) {
 

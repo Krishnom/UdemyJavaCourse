@@ -22,8 +22,8 @@ public class SpeedConverterTest extends TestHelper {
         });
     }
 
-    private double km;
-    private long miles;
+    private final double km;
+    private final long miles;
 
     public SpeedConverterTest(double km, long miles) {
         super();

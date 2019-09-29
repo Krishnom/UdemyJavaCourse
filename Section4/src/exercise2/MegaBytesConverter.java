@@ -1,6 +1,6 @@
 package exercise2;
 
-public class MegaBytesConverter {
+class MegaBytesConverter {
     public static void printMegaBytesAndKiloBytes(int kiloBytes) {
         int megaBytes = kiloBytes / 1024;
         int extraKiloBytes = kiloBytes % 1024;

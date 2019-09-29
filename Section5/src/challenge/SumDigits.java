@@ -1,6 +1,6 @@
 package challenge;
 
-public class SumDigits {
+class SumDigits {
 
     public static void main(String[] args) {
         System.out.println(getDigitSum(1));

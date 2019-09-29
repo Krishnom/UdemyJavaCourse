@@ -1,8 +1,8 @@
 package exercise14;
 
-public class SumOddRange {
+class SumOddRange {
 
-    public static boolean isOdd(int number)
+    private static boolean isOdd(int number)
     {
         if(number < 0) return false;
         return number % 2 != 0;
@@ -10,7 +10,7 @@ public class SumOddRange {
     
     public static int sumOdd(int start, int end)
     {
-        if(start > end || start <0 || end < 0)
+        if(start > end || start < 0)
         {
             return -1;
         }

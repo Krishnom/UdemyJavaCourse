@@ -2,7 +2,7 @@ package exercise27;
 
 import java.util.Scanner;
 
-public class InputCalculator {
+class InputCalculator {
     public static void main(String[] args) {
         inputThenPrintSumAndAverage();
     }

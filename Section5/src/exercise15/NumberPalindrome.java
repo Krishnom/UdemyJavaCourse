@@ -1,6 +1,6 @@
 package exercise15;
 
-public class NumberPalindrome {
+class NumberPalindrome {
 
     public static boolean isPalindrome(int number)
     {

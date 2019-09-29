@@ -2,7 +2,7 @@ package challenge;
 
 import java.util.Scanner;
 
-public class ReadUserInputChallenge {
+class ReadUserInputChallenge {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

@@ -1,6 +1,6 @@
 package exercise22;
 
-public class PerfectNumber {
+class PerfectNumber {
     public static boolean isPerfectNumber(int num) {
         if (num < 1) {
             return false;
@@ -13,10 +13,6 @@ public class PerfectNumber {
             }
         }
 
-        if (divisorSum == num) {
-            return true;
-        } else {
-            return false;
-        }
+        return divisorSum == num;
     }
 }

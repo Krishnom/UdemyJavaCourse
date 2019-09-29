@@ -28,9 +28,9 @@ public class SolutionTest extends ParameterizedTestHelper {
     }
 
 
-    int minute;
-    int seconds;
-    String durationString;
+    private final int minute;
+    private final int seconds;
+    private final String durationString;
 
     public SolutionTest(int minute, int seconds, String durationString) {
         this.minute = minute;
@@ -43,6 +43,7 @@ public class SolutionTest extends ParameterizedTestHelper {
         assertEquals(durationString, Solution.getDurationString(minute,seconds));
     }
 
+    @SuppressWarnings("EmptyMethod")
     @Test
     @Ignore("TODO: Not able to find a way to inject two different data into one JUnit Test")
     public void testGetDurationString() {

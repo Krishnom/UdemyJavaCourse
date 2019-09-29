@@ -20,8 +20,8 @@ public class PerfectNumberTest extends ParameterizedTestHelper {
         });
     }
 
-    int num;
-    boolean isPerfect;
+    private final int num;
+    private final boolean isPerfect;
 
     public PerfectNumberTest(int num, boolean isPerfect) {
         this.num = num;

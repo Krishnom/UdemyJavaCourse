@@ -18,8 +18,9 @@ public class SharedDigitTest extends ParameterizedTestHelper {
         });
     }
 
-    int num1,num2;
-    boolean hasSharedDigit;
+    private final int num1;
+    private final int num2;
+    private final boolean hasSharedDigit;
 
     public SharedDigitTest(int num1, int num2, boolean hasSharedDigit) {
         this.num1 = num1;

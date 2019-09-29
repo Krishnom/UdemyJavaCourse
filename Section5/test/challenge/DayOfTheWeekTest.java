@@ -18,8 +18,8 @@ public class DayOfTheWeekTest extends ParameterizedTestHelper {
         });
     }
 
-    int day;
-    String dayOfWeek;
+    private final int day;
+    private final String dayOfWeek;
 
     public DayOfTheWeekTest(int day, String dayOfWeek) {
         this.day = day;

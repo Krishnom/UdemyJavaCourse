@@ -22,10 +22,10 @@ public class FlourPackerTest extends ParameterizedTestHelper {
         );
     }
 
-    int bigBagCount;
-    int smallBagCount;
-    int target;
-    boolean isAchievable;
+    private final int bigBagCount;
+    private final int smallBagCount;
+    private final int target;
+    private final boolean isAchievable;
 
     public FlourPackerTest(int bigBagCount, int smallBagCount, int target, boolean isAchievable) {
         this.bigBagCount = bigBagCount;

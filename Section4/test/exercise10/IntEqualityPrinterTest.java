@@ -18,10 +18,10 @@ public class IntEqualityPrinterTest extends ParameterizedTestHelper {
         });
     }
 
-    private int num1;
-    private int num2;
-    private int num3;
-    private String expectedString;
+    private final int num1;
+    private final int num2;
+    private final int num3;
+    private final String expectedString;
 
     public IntEqualityPrinterTest(int num1, int num2, int num3, String expectedString) {
         this.num1 = num1;

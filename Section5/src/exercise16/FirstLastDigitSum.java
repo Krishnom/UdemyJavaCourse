@@ -1,6 +1,6 @@
 package exercise16;
 
-public class FirstLastDigitSum {
+class FirstLastDigitSum {
     public static int sumFirstAndLastDigit(int number) {
         if (number < 0) return -1;
         int firstDigit;

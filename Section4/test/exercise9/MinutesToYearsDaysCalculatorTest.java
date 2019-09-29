@@ -1,13 +1,10 @@
 package exercise9;
 
 import common.ParameterizedTestHelper;
-import common.TestHelper;
 import org.junit.Test;
 import org.junit.runners.Parameterized;
 
 import java.util.Arrays;
-
-import static org.junit.Assert.assertEquals;
 
 public class MinutesToYearsDaysCalculatorTest extends ParameterizedTestHelper {
 
@@ -21,8 +18,8 @@ public class MinutesToYearsDaysCalculatorTest extends ParameterizedTestHelper {
         });
     }
 
-    private long minutes;
-    private String expectedString;
+    private final long minutes;
+    private final String expectedString;
 
     public MinutesToYearsDaysCalculatorTest(long minutes, String expectedString) {
         this.minutes = minutes;

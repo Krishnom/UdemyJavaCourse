@@ -33,13 +33,14 @@ public class TestHelper {
     }
 
     //Before running tests that depends on user input, user must have to set this
-    public void setInputContent(String input) {
+    protected void setInputContent(String input) {
         //TODO: this is not working at all. Need to fix
         this.inputContent = new ByteArrayInputStream(input.getBytes());
     }
 
     //Before running tests that depends on user input, user must have to set this
-    public void setInputContent(File input) {
+    @SuppressWarnings("EmptyMethod")
+    public void setInputContent() {
         //TODO: enable setting input from file
     }
 }

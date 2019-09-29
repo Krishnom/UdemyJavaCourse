@@ -1,6 +1,6 @@
 package exercise13;
 
-public class NumberOfDaysInMonth {
+class NumberOfDaysInMonth {
     public static boolean isLeapYear(int year) {
         if (isaValidYear(year))
             return false;
@@ -8,9 +8,7 @@ public class NumberOfDaysInMonth {
         if (year % 4 == 0 && (year % 100 != 0))
             return true;
         else if (year % 4 != 0) return false;
-        else if (year % 100 == 0 && year % 400 == 0)
-            return true;
-        else return false;
+        else return year % 100 == 0 && year % 400 == 0;
     }
 
     public static int getDaysInMonth(int month, int year) {

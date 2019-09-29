@@ -21,8 +21,8 @@ public class SumDigitsTest extends ParameterizedTestHelper {
         });
     }
 
-    int num;
-    int digitSum;
+    private final int num;
+    private final int digitSum;
 
     public SumDigitsTest(int num, int digitSum) {
         this.num = num;

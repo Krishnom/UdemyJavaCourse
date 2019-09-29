@@ -10,7 +10,7 @@ import static org.junit.Assert.*;
 
 public class PlayingCatTest extends ParameterizedTestHelper {
 
-    @Parameterized.Parameters(name="Test{index}: IsSummer={0} Temprature={1} then cat playing={2}")
+    @Parameterized.Parameters(name="Test{index}: IsSummer={0} Temperature={1} then cat playing={2}")
             public static Iterable<Object[]> data(){
         return Arrays.asList(new Object[][]{
                 {true,10,false},
@@ -24,18 +24,18 @@ public class PlayingCatTest extends ParameterizedTestHelper {
     isCatPlaying(false, 35); should return true since temperature is in range 25 - 35
      */
 
-    private boolean isSummer;
-    private int temprature;
-    private boolean willCatPlay;
+    private final boolean isSummer;
+    private final int temperature;
+    private final boolean willCatPlay;
 
-    public PlayingCatTest(boolean isSummer, int temprature, boolean willCatPlay) {
+    public PlayingCatTest(boolean isSummer, int temperature, boolean willCatPlay) {
         this.isSummer = isSummer;
-        this.temprature = temprature;
+        this.temperature = temperature;
         this.willCatPlay = willCatPlay;
     }
 
     @Test
     public void isCatPlaying() {
-        assertEquals(willCatPlay,PlayingCat.isCatPlaying(isSummer,temprature));
+        assertEquals(willCatPlay,PlayingCat.isCatPlaying(isSummer, temperature));
     }
 }

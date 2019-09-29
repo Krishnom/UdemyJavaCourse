@@ -1,6 +1,5 @@
 package exercise19;
 
-import common.ParameterizedTestHelper;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

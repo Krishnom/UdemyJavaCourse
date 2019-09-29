@@ -1,6 +1,6 @@
 package exercise5;
 
-public class DecimalComparator{
+class DecimalComparator{
 
     public static boolean areEqualByThreeDecimalPlaces(double no1, double no2)
     {
@@ -9,12 +9,7 @@ public class DecimalComparator{
         int no1ToFloat = (int) (no1 * 1000);
         int no2ToFloat = (int) (no2 * 1000);
 
-        if(no1ToFloat == no2ToFloat)
-        {
-            return true;
-        }
-
-        return false;
+        return no1ToFloat == no2ToFloat;
     }
 
 }

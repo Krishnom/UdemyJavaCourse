@@ -20,8 +20,10 @@ public class PaintJobTest2 extends ParameterizedTestHelper {
         });
     }
 
-    double width,height,areaPerBucket;
-    int additionalBucket;
+    private final double width;
+    private final double height;
+    private final double areaPerBucket;
+    private final int additionalBucket;
 
     public PaintJobTest2(double width, double height, double areaPerBucket, int additionalBucket) {
         this.width = width;

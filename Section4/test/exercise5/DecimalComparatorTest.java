@@ -20,9 +20,9 @@ public class DecimalComparatorTest extends ParameterizedTestHelper {
         });
     }
 
-    private double doubleVal1;
-    private double doubleVal2;
-    private boolean areEqualToThreeDecimals;
+    private final double doubleVal1;
+    private final double doubleVal2;
+    private final boolean areEqualToThreeDecimals;
 
     public DecimalComparatorTest(double doubleVal1, double doubleVal2, boolean areEqualToThreeDecimals) {
         this.doubleVal1 = doubleVal1;

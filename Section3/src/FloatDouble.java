@@ -1,4 +1,4 @@
-public class FloatDouble {
+class FloatDouble {
 
     public static void main(String[] args) {
         double poundValue = 12d;

@@ -1,6 +1,6 @@
 package exercise18;
 
-public class SharedDigit {
+class SharedDigit {
     public static boolean hasSharedDigit(int n1, int n2) {
         if (n1 < 10 || n1 > 99)
             return false;

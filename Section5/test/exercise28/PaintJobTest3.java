@@ -9,7 +9,7 @@ import java.util.Arrays;
 import static org.junit.Assert.assertEquals;
 
 public class PaintJobTest3 extends ParameterizedTestHelper {
-    @Parameterized.Parameters(name="{2} buckets covering {1} area per bucker are required for {0} wall area")
+    @Parameterized.Parameters(name="{2} buckets covering {1} area per bucket are required for {0} wall area")
     public static Iterable<Object[]> data(){
         return Arrays.asList(new Object[][]{
                 {3.4,1.5,3},//getBucketCount(3.4, 1.5); → should return 3 since the area is 3.4 and a single bucket can cover an area of 1.5
@@ -20,9 +20,9 @@ public class PaintJobTest3 extends ParameterizedTestHelper {
         });
     }
 
-    double areaPerBucket;
-    double areaToCover;
-    int requiredBuckets;
+    private final double areaPerBucket;
+    private final double areaToCover;
+    private final int requiredBuckets;
 
     public PaintJobTest3(double areaToCover,double areaPerBucket, int requiredBuckets) {
         this.areaPerBucket = areaPerBucket;

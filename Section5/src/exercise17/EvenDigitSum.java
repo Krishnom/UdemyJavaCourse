@@ -1,6 +1,6 @@
 package exercise17;
 
-public class EvenDigitSum {
+class EvenDigitSum {
     
     public static int getEvenDigitSum(int num)
     {

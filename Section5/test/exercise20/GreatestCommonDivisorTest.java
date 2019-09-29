@@ -20,7 +20,9 @@ public class GreatestCommonDivisorTest extends ParameterizedTestHelper {
         });
     }
 
-    int num1,num2,gcd;
+    private final int num1;
+    private final int num2;
+    private final int gcd;
 
     public GreatestCommonDivisorTest(int num1, int num2, int gcd) {
         this.num1 = num1;
