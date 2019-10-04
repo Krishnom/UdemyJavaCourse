@@ -1,10 +1,10 @@
-package exercise35;
+package exercise36;
 
-public class Cylinder extends Circle {
+public class Cuboid extends Rectangle {
     private double height;
 
-    public Cylinder(double radius, double height) {
-        super(radius);
+    public Cuboid(double height, double width, double length) {
+        super(width, length);
 
         if (height < 0) {
             this.height = 0;
@@ -18,6 +18,6 @@ public class Cylinder extends Circle {
     }
 
     public double getVolume() {
-        return height * super.getArea();
+        return getArea() * height;
     }
 }
