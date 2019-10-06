@@ -1,8 +1,8 @@
 package exercise36;
 
 public class Rectangle {
-    protected double width;
-    protected double length;
+    private double width;
+    private double length;
 
     public Rectangle(double width, double length) {
         if (width < 0) {
