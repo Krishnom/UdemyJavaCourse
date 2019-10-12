@@ -3,7 +3,10 @@ package common;
 import org.junit.After;
 import org.junit.Before;
 
-import java.io.*;
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.InputStream;
+import java.io.PrintStream;
 
 import static org.junit.Assert.assertEquals;
 
@@ -18,8 +21,6 @@ public class TestHelper {
         sysOut = System.out;
         sysIn = System.in;
         System.setOut(new PrintStream(outContent));
-        setInputContent("");
-        System.setIn(inputContent);
     }
 
     @After
@@ -35,12 +36,7 @@ public class TestHelper {
     //Before running tests that depends on user input, user must have to set this
     protected void setInputContent(String input) {
         //TODO: this is not working at all. Need to fix
-        this.inputContent = new ByteArrayInputStream(input.getBytes());
-    }
-
-    //Before running tests that depends on user input, user must have to set this
-    @SuppressWarnings("EmptyMethod")
-    public void setInputContent() {
-        //TODO: enable setting input from file
+        inputContent = new ByteArrayInputStream(input.getBytes());
+        System.setIn(inputContent);
     }
 }
