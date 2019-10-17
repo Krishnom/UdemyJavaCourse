@@ -1,8 +1,9 @@
 package exercise13;
 
-import org.junit.Test;
 
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 public class NumberOfDaysInMonthTest {
 
@@ -30,7 +31,6 @@ public class NumberOfDaysInMonthTest {
     public void feb2000Has29Days() {
         assertEquals(29, NumberOfDaysInMonth.getDaysInMonth(2, 2000));
     }
-
 
     @Test
     public void feb1700Has28Days() {

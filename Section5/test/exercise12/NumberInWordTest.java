@@ -1,8 +1,7 @@
 package exercise12;
 
 import common.TestHelper;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Test;
 
 public class NumberInWordTest extends TestHelper {
 

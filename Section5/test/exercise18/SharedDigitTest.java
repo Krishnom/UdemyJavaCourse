@@ -1,35 +1,27 @@
 package exercise18;
 
-import common.ParameterizedTestHelper;
-import org.junit.Test;
-import org.junit.runners.Parameterized;
-import java.util.Arrays;
+import common.TestHelper;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
 
-import static org.junit.Assert.*;
+import java.util.stream.Stream;
 
-public class SharedDigitTest extends ParameterizedTestHelper {
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-    @Parameterized.Parameters(name="Test{index}->{0} and {1} has shared digit? {2}")
-    public static Iterable<Object[]> data() {
-        return Arrays.asList(new Object[][]{
-                {12, 23, true},//hasSharedDigit(12, 23); → should return true since the digit 2 appears in both numbers
-                {9, 99, false},//hasSharedDigit(9, 99); → should return false since 9 is not within the range of 10-99
-                {15, 55, true},//hasSharedDigit(15, 55); → should return true since the digit 5 appears in both numbers
-        });
+public class SharedDigitTest extends TestHelper {
+
+    public static Stream<Arguments> data() {
+        return Stream.of(
+                Arguments.of(12, 23, true),//hasSharedDigit(12, 23); → should return true since the digit 2 appears in both numbers
+                Arguments.of(9, 99, false),//hasSharedDigit(9, 99); → should return false since 9 is not within the range of 10-99
+                Arguments.of(15, 55, true)//hasSharedDigit(15, 55); → should return true since the digit 5 appears in both numbers
+        );
     }
 
-    private final int num1;
-    private final int num2;
-    private final boolean hasSharedDigit;
-
-    public SharedDigitTest(int num1, int num2, boolean hasSharedDigit) {
-        this.num1 = num1;
-        this.num2 = num2;
-        this.hasSharedDigit = hasSharedDigit;
-    }
-
-    @Test
-    public void hasSharedDigit() {
+    @ParameterizedTest
+    @MethodSource("data")
+    public void hasSharedDigit(int num1, int num2, boolean hasSharedDigit) {
         assertEquals(hasSharedDigit, SharedDigit.hasSharedDigit(num1,num2));
     }
 }
