@@ -1,33 +1,21 @@
 package exercise10;
 
-import common.ParameterizedTestHelper;
-import org.junit.Test;
-import org.junit.runners.Parameterized;
+import common.TestHelper;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
 
-import java.util.Arrays;
+import java.util.stream.Stream;
 
-public class IntEqualityPrinterTest extends ParameterizedTestHelper {
+public class IntEqualityPrinterTest extends TestHelper {
 
-    @Parameterized.Parameters(name = "Test{index}: {0},{1},{2} -> {3}")
-    public static Iterable<Object[]> data() {
-        return Arrays.asList(new Object[][]{
-                {1, 1, 1, "All numbers are equal"},
-                {1, 1, 2, "Neither all are equal or different"},
-                {-1, -1, -1, "Invalid Value"},
-                {1, 2, 3, "All numbers are different"}
-        });
-    }
-
-    private final int num1;
-    private final int num2;
-    private final int num3;
-    private final String expectedString;
-
-    public IntEqualityPrinterTest(int num1, int num2, int num3, String expectedString) {
-        this.num1 = num1;
-        this.num2 = num2;
-        this.num3 = num3;
-        this.expectedString = expectedString;
+    public static Stream<Arguments> data() {
+        return Stream.of(
+                Arguments.of(1, 1, 1, "All numbers are equal"),
+                Arguments.of(1, 1, 2, "Neither all are equal or different"),
+                Arguments.of(-1, -1, -1, "Invalid Value"),
+                Arguments.of(1, 2, 3, "All numbers are different")
+        );
     }
 
     /*
@@ -36,9 +24,10 @@ public class IntEqualityPrinterTest extends ParameterizedTestHelper {
         printEqual(-1, -1, -1); should print text Invalid Value
         printEqual(1, 2, 3); should print text All numbers are different
          */
-    @Test
-    public void printEqual() {
-        IntEqualityPrinter.printEqual(num1,num2,num3);
+    @ParameterizedTest
+    @MethodSource("data")
+    public void printEqual(int num1, int num2, int num3, String expectedString) {
+        IntEqualityPrinter.printEqual(num1, num2, num3);
         assertSysout(expectedString);
     }
 }

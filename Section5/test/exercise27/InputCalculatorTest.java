@@ -1,14 +1,12 @@
 package exercise27;
 
 import common.TestHelper;
-import org.junit.Ignore;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Disabled;
 
 public class InputCalculatorTest extends TestHelper {
-
-
     @Test
-    @Ignore("Failing because sysin not working")
+    @Disabled("Failing because sysin not working")
     public void input1() {
         String input1 = "1\n2\n3\n4\n5\na\n";
         setInputContent(input1);
@@ -17,9 +15,8 @@ public class InputCalculatorTest extends TestHelper {
         assertSysout(expectedOut1);
     }
 
-
     @Test
-    @Ignore("Failing because sysin not working")
+    @Disabled("Failing because sysin not working")
     public void input2() {
         String input2 = "hello\n";
         setInputContent(input2);

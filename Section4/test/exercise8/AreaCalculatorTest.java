@@ -1,9 +1,8 @@
 package exercise8;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static junit.framework.TestCase.assertEquals;
-
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class AreaCalculatorTest {
     /*
@@ -13,21 +12,25 @@ public class AreaCalculatorTest {
     area(-1.0, 4.0);  should return -1 since first the parameter is negative
      */
 
-    @Test public void areaOfCircleIsReturnedWhenOneParameterIsPassed(){
+    @Test
+    public void areaOfCircleIsReturnedWhenOneParameterIsPassed() {
         assertEquals(78.53975, AreaCalculator.area(5.0));
     }
 
-    @Test public void negativeAreaOfCircleWhenRadiusIsNotValid(){
+    @Test
+    public void negativeAreaOfCircleWhenRadiusIsNotValid() {
         assertEquals(-1.0, AreaCalculator.area(-1));
     }
 
-    @Test public void areaOfRectangleIsReturnedWhenTwoParameterIsPassed(){
-        assertEquals(20.0, AreaCalculator.area(5.0,4.0));
+    @Test
+    public void areaOfRectangleIsReturnedWhenTwoParameterIsPassed() {
+        assertEquals(20.0, AreaCalculator.area(5.0, 4.0));
     }
 
 
-    @Test public void negativeAreaOfRectangleWhenParametersAreInvalid(){
-        assertEquals(-1.0, AreaCalculator.area(-1.0,4.0));
+    @Test
+    public void negativeAreaOfRectangleWhenParametersAreInvalid() {
+        assertEquals(-1.0, AreaCalculator.area(-1.0, 4.0));
     }
 
 }

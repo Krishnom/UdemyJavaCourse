@@ -1,39 +1,33 @@
 package challenge;
 
-import common.ParameterizedTestHelper;
-import org.junit.Test;
-import org.junit.runners.Parameterized;
+import common.TestHelper;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
 
-import java.util.Arrays;
+import java.util.stream.Stream;
 
-public class DayOfTheWeekTest extends ParameterizedTestHelper {
+public class DayOfTheWeekTest extends TestHelper {
 
-    @Parameterized.Parameters(name = "Test{index} {0}th day is {1}")
-    public static Iterable<Object[]> data() {
-        return Arrays.asList(new Object[][]{
-                {0, "Sunday"},
-                {6, "Saturday"},
-                {7, "Invalid Day"},
-                {-1, "Invalid Day"}
-        });
+    public static Stream<Arguments> data() {
+        return Stream.of(
+                Arguments.of(0, "Sunday"),
+                Arguments.of(6, "Saturday"),
+                Arguments.of(7, "Invalid Day"),
+                Arguments.of(-1, "Invalid Day")
+        );
     }
 
-    private final int day;
-    private final String dayOfWeek;
-
-    public DayOfTheWeekTest(int day, String dayOfWeek) {
-        this.day = day;
-        this.dayOfWeek = dayOfWeek;
-    }
-
-    @Test
-    public void printDayOfWeekUsingSwitchCase() {
+    @ParameterizedTest
+    @MethodSource("data")
+    public void printDayOfWeekUsingSwitchCase(int day, String dayOfWeek) {
         DayOfTheWeek.printDayOfWeekUsingSwitchCase(day);
         assertSysout(dayOfWeek);
     }
 
-    @Test
-    public void printDayOfWeekUsingIfElse() {
+    @ParameterizedTest
+    @MethodSource("data")
+    public void printDayOfWeekUsingIfElse(int day, String dayOfWeek) {
         DayOfTheWeek.printDayOfWeekUsingIfElse(day);
         assertSysout(dayOfWeek);
     }

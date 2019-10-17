@@ -1,7 +1,7 @@
 package exercise2;
 
 import common.TestHelper;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 
 public class MegaBytesConverterTest extends TestHelper {

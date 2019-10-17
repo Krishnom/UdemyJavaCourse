@@ -1,37 +1,29 @@
 package challenge;
 
-import common.ParameterizedTestHelper;
-import org.junit.Test;
-import org.junit.runners.Parameterized;
+import common.TestHelper;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
 
-import java.util.Arrays;
+import java.util.stream.Stream;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class SumDigitsTest extends ParameterizedTestHelper {
+public class SumDigitsTest extends TestHelper {
 
-    @Parameterized.Parameters(name="Test{index} sumOfDigitIn{0} is {1}")
-    public static Iterable<Object[]> data(){
-        return Arrays.asList(new Object[][]{
-                {1,1},
-                {12,3},
-                {1234, 10},
-                {9999,36},
-                {9000, 9}
-        });
+    public static Stream<Arguments> data(){
+        return Stream.of(
+                Arguments.of(1,1),
+                Arguments.of(12,3),
+                Arguments.of(1234, 10),
+                Arguments.of(9999,36),
+                Arguments.of(9000, 9)
+        );
     }
 
-    private final int num;
-    private final int digitSum;
-
-    public SumDigitsTest(int num, int digitSum) {
-        this.num = num;
-        this.digitSum = digitSum;
-    }
-
-
-    @Test
-    public void getDigitSum() {
+    @ParameterizedTest
+    @MethodSource("data")
+    public void getDigitSum(int num, int digitSum) {
         assertEquals(digitSum,SumDigits.getDigitSum(num));
     }
 }

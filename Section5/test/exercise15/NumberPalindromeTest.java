@@ -1,33 +1,27 @@
 package exercise15;
 
-import common.ParameterizedTestHelper;
-import org.junit.Test;
-import org.junit.runners.Parameterized;
+import common.TestHelper;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
 
-import java.util.Arrays;
+import java.util.stream.Stream;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class NumberPalindromeTest extends ParameterizedTestHelper {
+public class NumberPalindromeTest extends TestHelper {
 
-    @Parameterized.Parameters(name="{0} is palindrome? {1} ")
-    public static Iterable<Object[]> data(){
-        return Arrays.asList(new Object[][]{
-                {-1221, true}, //isPalindrome(-1221); → should return true
-                {707,true},//isPalindrome(707); → should return true
-                {11212,false},//isPalindrome(11212); → should return false because reverse is 21211 and that is not equal to 11212.
-        });
-    }
-    private final int num;
-    private final boolean isPalindrome;
-
-    public NumberPalindromeTest(int num, boolean isPalindrome) {
-        this.num = num;
-        this.isPalindrome = isPalindrome;
+    public static Stream<Arguments> data(){
+        return Stream.of(
+                Arguments.of(-1221, true), //isPalindrome(-1221); → should return true
+                Arguments.of(707,true),//isPalindrome(707); → should return true
+                Arguments.of(11212,false)//isPalindrome(11212); → should return false because reverse is 21211 and that is not equal to 11212.
+        );
     }
 
-    @Test
-    public void isPalindrome() {
+    @ParameterizedTest
+    @MethodSource("data")
+    public void isPalindrome(int num, boolean isPalindrome) {
         assertEquals(isPalindrome, NumberPalindrome.isPalindrome(num));
     }
 }
