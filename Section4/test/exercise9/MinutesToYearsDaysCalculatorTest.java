@@ -1,29 +1,21 @@
 package exercise9;
 
-import common.ParameterizedTestHelper;
-import org.junit.Test;
-import org.junit.runners.Parameterized;
+import common.TestHelper;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
 
-import java.util.Arrays;
+import java.util.stream.Stream;
 
-public class MinutesToYearsDaysCalculatorTest extends ParameterizedTestHelper {
+public class MinutesToYearsDaysCalculatorTest extends TestHelper {
 
-    @Parameterized.Parameters(name = "Test{index} {0} is {1}")
-    public static Iterable<Object[]> data() {
-        return Arrays.asList(new Object[][]{
-                {525600, "525600 min = 1 y and 0 d"},
-                {1051200, "1051200 min = 2 y and 0 d"},
-                {561600, "561600 min = 1 y and 25 d"},
-                {-1, "Invalid Value"}
-        });
-    }
-
-    private final long minutes;
-    private final String expectedString;
-
-    public MinutesToYearsDaysCalculatorTest(long minutes, String expectedString) {
-        this.minutes = minutes;
-        this.expectedString = expectedString;
+    public static Stream<Arguments> data() {
+        return Stream.of(
+                Arguments.of(525600, "525600 min = 1 y and 0 d"),
+                Arguments.of(1051200, "1051200 min = 2 y and 0 d"),
+                Arguments.of(561600, "561600 min = 1 y and 25 d"),
+                Arguments.of(-1, "Invalid Value")
+        );
     }
 
     /*
@@ -32,8 +24,9 @@ public class MinutesToYearsDaysCalculatorTest extends ParameterizedTestHelper {
         printYearsAndDays(561600);  → should print "561600 min = 1 y and 25 d"
         printYearsAndDays(-1);  → should print "Invalid Value"
          */
-    @Test
-    public void printYearsAndDays() {
+    @ParameterizedTest
+    @MethodSource("data")
+    public void printYearsAndDays(long minutes, String expectedString) {
         MinutesToYearsDaysCalculator.printYearsAndDays(minutes);
         assertSysout(expectedString);
     }

@@ -1,9 +1,9 @@
 package exercise23;
 
 import common.TestHelper;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class NumberToWordsTest extends TestHelper {
 
@@ -61,20 +61,27 @@ public class NumberToWordsTest extends TestHelper {
 
 
     //getDigitCount(0); should return 1 since there is only 1 digit
-    @Test public void thereIs1DigitIn0(){
-        assertEquals(1,NumberToWords.getDigitCount(0));
+    @Test
+    public void thereIs1DigitIn0() {
+        assertEquals(1, NumberToWords.getDigitCount(0));
     }
+
     //getDigitCount(123); should return 3
-    @Test public void thereAre3DigitIn123(){
-        assertEquals(3,NumberToWords.getDigitCount(123));
+    @Test
+    public void thereAre3DigitIn123() {
+        assertEquals(3, NumberToWords.getDigitCount(123));
     }
+
     //getDigitCount(-12); should return -1 since the parameter is negative
-    @Test public void negativeValuesReturnsNegativeDigitCount(){
-        assertEquals(-1,NumberToWords.getDigitCount(-12));
+    @Test
+    public void negativeValuesReturnsNegativeDigitCount() {
+        assertEquals(-1, NumberToWords.getDigitCount(-12));
     }
+
     //getDigitCount(5200); should return 4 since there are 4 digits in the number
-    @Test public void thereAre4DigitIn5200(){
-        assertEquals(4,NumberToWords.getDigitCount(5200));
+    @Test
+    public void thereAre4DigitIn5200() {
+        assertEquals(4, NumberToWords.getDigitCount(5200));
     }
 
 }

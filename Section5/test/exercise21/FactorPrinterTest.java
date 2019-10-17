@@ -1,33 +1,26 @@
 package exercise21;
 
-import common.ParameterizedTestHelper;
-import org.junit.Test;
-import org.junit.runners.Parameterized;
+import common.TestHelper;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
 
-import java.util.Arrays;
+import java.util.stream.Stream;
 
-public class FactorPrinterTest extends ParameterizedTestHelper {
+public class FactorPrinterTest extends TestHelper {
 
-    @Parameterized.Parameters(name="Test{index}-> {0} prints \"{1}\"")
-    public static Iterable<Object[]> data(){
-        return Arrays.asList(new Object[][]{
-                {6,"1 2 3 6"},//printFactors(6); → should print 1 2 3 6
-                {32, "1 2 4 8 16 32"},//printFactors(32); → should print 1 2 4 8 16 32
-                {10,"1 2 5 10"},//printFactors(10); → should print 1 2 5 10
-                {-1,"Invalid Value"}//printFactors(-1); → should print "Invalid Value" since number is < 1
-        });
+    public static Stream<Arguments> data(){
+        return Stream.of(
+                Arguments.of(6,"1 2 3 6"),//printFactors(6); → should print 1 2 3 6
+                Arguments.of(32, "1 2 4 8 16 32"),//printFactors(32); → should print 1 2 4 8 16 32
+                Arguments.of(10,"1 2 5 10"),//printFactors(10); → should print 1 2 5 10
+                Arguments.of(-1,"Invalid Value")//printFactors(-1); → should print "Invalid Value" since number is < 1
+        );
     }
 
-    private final int num;
-    private final String expectedOutput;
-
-    public FactorPrinterTest(int num, String expectedOutput) {
-        this.num = num;
-        this.expectedOutput = expectedOutput;
-    }
-
-    @Test
-    public void printFactors() {
+    @ParameterizedTest
+    @MethodSource("data")
+    public void printFactors(int num, String expectedOutput) {
         FactorPrinter.printFactors(num);
         assertSysout(expectedOutput);
     }

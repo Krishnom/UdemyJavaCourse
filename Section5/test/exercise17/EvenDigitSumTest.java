@@ -1,34 +1,27 @@
 package exercise17;
 
-import common.ParameterizedTestHelper;
-import org.junit.Test;
-import org.junit.runners.Parameterized;
+import common.TestHelper;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
 
-import java.util.Arrays;
+import java.util.stream.Stream;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class EvenDigitSumTest extends ParameterizedTestHelper {
+public class EvenDigitSumTest extends TestHelper {
 
-    @Parameterized.Parameters(name = "Test{index} SumOfEvenDigitsIn {0} is {1}")
-    public static Iterable<Object[]> data() {
-        return Arrays.asList(new Object[][]{
-                {123456789, 20},    //getEvenDigitSum(123456789); → should return 20 since 2 + 4 + 6 + 8 = 20
-                {252, 4},   //getEvenDigitSum(252); → should return 4 since 2 + 2 = 4
-                {-22, -1}   //getEvenDigitSum(-22); → should return -1 since the number is negative
-        });
+    public static Stream<Arguments> data() {
+        return Stream.of(
+                Arguments.of(123456789, 20),    //getEvenDigitSum(123456789); → should return 20 since 2 + 4 + 6 + 8 = 20
+                Arguments.of(252, 4),   //getEvenDigitSum(252); → should return 4 since 2 + 2 = 4
+                Arguments.of(-22, -1)   //getEvenDigitSum(-22); → should return -1 since the number is negative
+        );
     }
 
-    private final int num;
-    private final int sumOfEvenDigits;
-
-    public EvenDigitSumTest(int num, int sumOfEvenDigits) {
-        this.num = num;
-        this.sumOfEvenDigits = sumOfEvenDigits;
-    }
-
-    @Test
-    public void getEvenDigitSum() {
+    @ParameterizedTest
+    @MethodSource("data")
+    public void getEvenDigitSum(int num, int sumOfEvenDigits) {
         assertEquals(sumOfEvenDigits,EvenDigitSum.getEvenDigitSum(num));
     }
 }

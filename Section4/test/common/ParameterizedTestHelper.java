@@ -1,9 +1,9 @@
 package common;
 
-import org.junit.runner.RunWith;
-import org.junit.runners.Parameterized;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.api.extension.Extension;
 
-@RunWith(Parameterized.class)
+@ExtendWith(Extension.class)
 public abstract class ParameterizedTestHelper extends TestHelper {
 
 //    @Parameterized.Parameters(name = "Test={index} {0} {1} {2}}")

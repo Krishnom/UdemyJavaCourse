@@ -1,11 +1,11 @@
 package common;
 
-import org.junit.After;
-import org.junit.Before;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.AfterEach;
 
 import java.io.*;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TestHelper {
     private PrintStream sysOut;
@@ -13,7 +13,7 @@ public class TestHelper {
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     private ByteArrayInputStream inputContent;
 
-    @Before
+    @BeforeEach
     public void setUpStreams() {
         sysOut = System.out;
         sysIn = System.in;
@@ -22,7 +22,7 @@ public class TestHelper {
         System.setIn(inputContent);
     }
 
-    @After
+    @AfterEach
     public void revertStreams() {
         System.setOut(sysOut);
         System.setIn(sysIn);
