@@ -1,18 +1,12 @@
 package exercise4;
 
 import common.TestHelper;
-import org.junit.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
-import org.junit.runner.RunWith;
-import org.junit.runners.Parameterized;
-
-import java.util.Arrays;
 import java.util.stream.Stream;
 
-import static junit.framework.TestCase.assertEquals;
-
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class LeapYearTest extends TestHelper {
     /*  isLeapYear(-1600); → should return false since the parameter is not in range (1-9999)

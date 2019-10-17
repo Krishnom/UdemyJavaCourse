@@ -5,7 +5,7 @@ import org.junit.jupiter.api.AfterEach;
 
 import java.io.*;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TestHelper {
     private PrintStream sysOut;
