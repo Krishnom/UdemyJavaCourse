@@ -1,22 +1,22 @@
 package exercise11;
 
-import common.ParameterizedTestHelper;
-import org.junit.Test;
-import org.junit.runners.Parameterized;
+import common.TestHelper;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
 
-import java.util.Arrays;
+import java.util.stream.Stream;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class PlayingCatTest extends ParameterizedTestHelper {
+public class PlayingCatTest extends TestHelper {
 
-    @Parameterized.Parameters(name="Test{index}: IsSummer={0} Temperature={1} then cat playing={2}")
-            public static Iterable<Object[]> data(){
-        return Arrays.asList(new Object[][]{
-                {true,10,false},
-                {false,36,false},
-                {false,35,true}
-        });
+    public static Stream<Arguments> data() {
+        return Stream.of(
+                Arguments.of(true, 10, false),
+                Arguments.of(false, 36, false),
+                Arguments.of(false, 35, true)
+        );
     }
     /*
     isCatPlaying(true, 10); should return false since temperature is not in range 25 - 45
@@ -24,18 +24,9 @@ public class PlayingCatTest extends ParameterizedTestHelper {
     isCatPlaying(false, 35); should return true since temperature is in range 25 - 35
      */
 
-    private final boolean isSummer;
-    private final int temperature;
-    private final boolean willCatPlay;
-
-    public PlayingCatTest(boolean isSummer, int temperature, boolean willCatPlay) {
-        this.isSummer = isSummer;
-        this.temperature = temperature;
-        this.willCatPlay = willCatPlay;
-    }
-
-    @Test
-    public void isCatPlaying() {
-        assertEquals(willCatPlay,PlayingCat.isCatPlaying(isSummer, temperature));
+    @ParameterizedTest
+    @MethodSource("data")
+    public void isCatPlaying(boolean isSummer, int temperature, boolean willCatPlay) {
+        assertEquals(willCatPlay, PlayingCat.isCatPlaying(isSummer, temperature));
     }
 }

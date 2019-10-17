@@ -1,51 +1,41 @@
 package SecondAndMinuteChallenge;
 
-import common.ParameterizedTestHelper;
-import org.junit.Ignore;
-import org.junit.Test;
-import org.junit.runners.Parameterized;
+import common.TestHelper;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
 
-import java.util.Arrays;
+import java.util.stream.Stream;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
+public class SolutionTest extends TestHelper {
 
-public class SolutionTest extends ParameterizedTestHelper {
-
-    @Parameterized.Parameters(name = "Test{index} -> {0} min {1} sec returns {2}")
-    public static Iterable<Object[]> dataForTwoParameterMethod(){
-        return Arrays.asList(new Object[][]{
-                {-1,10,"Invalid Value"}, //minutes < 0 returns "Invalid value"
-                {1,60, "Invalid Value"}, //Invalid seconds value(sec <= 59 && sec >=0)
-                {1,-1, "Invalid Value"}, //Negative seconds value
-                {1,-1, "Invalid Value"}, //Negative seconds value
-                {1,-1, "Invalid Value"}, //Negative seconds value
-                {61,50, "01h 01m 50s"}, //valid value returns time in format "XXh YYm ZZs"
-                {0,50, "00h 00m 50s"}, //valid value returns time in format "XXh YYm ZZs"
-                {60,50, "01h 00m 50s"}, //valid value returns time in format "XXh YYm ZZs"
-                {2060,50, "34h 20m 50s"}, //valid value returns time in format "XXh YYm ZZs"
-        });
+    public static Stream<Arguments> data(){
+        return Stream.of(
+                Arguments.of(-1,10,"Invalid Value"), //minutes < 0 returns "Invalid value"
+                Arguments.of(1,60, "Invalid Value"), //Invalid seconds value(sec <= 59 && sec >=0)
+                Arguments.of(1,-1, "Invalid Value"), //Negative seconds value
+                Arguments.of(1,-1, "Invalid Value"), //Negative seconds value
+                Arguments.of(1,-1, "Invalid Value"), //Negative seconds value
+                Arguments.of(61,50, "01h 01m 50s"), //valid value returns time in format "XXh YYm ZZs"
+                Arguments.of(0,50, "00h 00m 50s"), //valid value returns time in format "XXh YYm ZZs"
+                Arguments.of(60,50, "01h 00m 50s"), //valid value returns time in format "XXh YYm ZZs"
+                Arguments.of(2060,50, "34h 20m 50s") //valid value returns time in format "XXh YYm ZZs"
+        );
     }
 
-
-    private final int minute;
-    private final int seconds;
-    private final String durationString;
-
-    public SolutionTest(int minute, int seconds, String durationString) {
-        this.minute = minute;
-        this.seconds = seconds;
-        this.durationString = durationString;
-    }
-
-    @Test
-    public void getDurationString(){
+    @ParameterizedTest
+    @MethodSource("data")
+    public void getDurationString(int minute, int seconds, String durationString){
         assertEquals(durationString, Solution.getDurationString(minute,seconds));
     }
 
     @SuppressWarnings("EmptyMethod")
     @Test
-    @Ignore("TODO: Not able to find a way to inject two different data into one JUnit Test")
+    @Disabled("TODO: Not able to find a way to inject two different data into one JUnit Test")
     public void testGetDurationString() {
         //TODO: how to use two data in single data driven test
     }
