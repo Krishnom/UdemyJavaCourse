@@ -11,9 +11,14 @@ public class AlbumsMain {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
         boolean quit = false;
-        ListIterator<Song> songListIterator = playlist.listIterator();
+        ghoomar.addSongToPlaylist(1, playlist);
+        ghoomar.addSongToPlaylist(2, playlist);
+        ghoomar.addSongToPlaylist(3, playlist);
+        ghoomar.addSongToPlaylist(4, playlist);
+        ghoomar.addSongToPlaylist(5, playlist);
+
+        ListIterator<Song> playlistIterator = playlist.listIterator();
         while (!quit) {
             printMenu();
             System.out.print("Enter a choice from menu: ");
@@ -21,58 +26,50 @@ public class AlbumsMain {
             scanner.nextLine();//ignore new line
             switch (option) {
                 case 1:
-                    System.out.print("Enter title no: ");
-                    int trackNumber = scanner.nextInt();
-                    scanner.nextLine();
-                    ghoomar.addSongToPlaylist(trackNumber, playlist);
+                case 5:
+                    System.out.println("Not implemented yet");
                     break;
                 case 2:
                     if (goingForward) {
-                        if (songListIterator.hasNext()) {
-                            Song song = songListIterator.next();
-                            song.playSong();
+                        if (playlistIterator.hasNext()) {
+                            playlistIterator.next().playSong();
                         }
                     } else {
-                        if (songListIterator.hasPrevious()) {
-                            songListIterator.previous().playSong();
+                        if (playlistIterator.hasPrevious()) {
+                            playlistIterator.previous().playSong();
                         }
                     }
                     break;
                 case 3:
                     if (!goingForward) {
-                        if (songListIterator.hasNext()) {
-                            songListIterator.next();
+                        if (playlistIterator.hasNext()) {
+                            playlistIterator.next();
                         }
                         goingForward = true;
                     }
 
-                    if (songListIterator.hasNext()) {
-                        Song song = songListIterator.next();
-                        song.playSong();
+                    if (playlistIterator.hasNext()) {
+                        playlistIterator.next().playSong();
                     } else {
-                        System.out.println("Stay tuned for more songs");
+                        System.out.println("Reached at the end of playlist");
                     }
                     break;
                 case 4:
                     if (goingForward) {
-                        if (songListIterator.hasPrevious()) {
-                            songListIterator.previous();
+                        if (playlistIterator.hasPrevious()) {
+                            playlistIterator.previous();
                         }
                         goingForward = false;
                     }
 
-                    if (songListIterator.hasPrevious()) {
-                        songListIterator.previous().playSong();
+                    if (playlistIterator.hasPrevious()) {
+                        playlistIterator.previous().playSong();
                     } else {
-                        System.out.println("Stay tuned for more songs");
+                        System.out.println("Reached at the top of playlist");
                     }
                     break;
-                case 5:
-                    System.out.print("Enter song title to remove: ");
-                    removeSongFromPlaylist(playlist, scanner.nextLine());
-                    break;
                 case 6:
-                    ghoomar.printListOfSongs();
+                    printPlaylistItems(playlist);
                     break;
                 case 7:
                     quit = true;
@@ -81,14 +78,10 @@ public class AlbumsMain {
         }
     }
 
-
-    private static void removeSongFromPlaylist(LinkedList<Song> playlist, String title) {
+    private static void printPlaylistItems(LinkedList<Song> playlist) {
+        int i = 0;
         for (Song song : playlist) {
-            if (song.getTitle().equals(title)) {
-                playlist.remove(song);
-            } else {
-                System.out.println("Song not found in playlist");
-            }
+            System.out.println((++i) + ". " + song.toString());
         }
     }
 

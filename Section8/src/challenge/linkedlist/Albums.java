@@ -63,8 +63,4 @@ public class Albums {
         }
         System.out.println("Song with title \"" + title + "\" not found in album " + artist);
     }
-
-    public String getArtist() {
-        return artist;
-    }
 }

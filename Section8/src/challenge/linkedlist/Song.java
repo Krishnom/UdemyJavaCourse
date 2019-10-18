@@ -17,7 +17,6 @@ public class Song {
                 '}';
     }
 
-
     public void playSong() {
         System.out.println("Playing " + title);
     }
