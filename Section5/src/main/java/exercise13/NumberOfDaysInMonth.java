@@ -39,6 +39,6 @@ class NumberOfDaysInMonth {
     }
 
     private static boolean isaValidYear(int year) {
-        return year < 1 || year > 9999;
+        return year < 0 || year > 9999;
     }
 }
