@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Section9" />
+        <module name="Section8" />
+        <module name="Section7" />
+        <module name="Section6" />
+        <module name="Section5" />
+        <module name="Section4" />
+        <module name="Section3" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Common" target="11" />
+      <module name="Root" target="11" />
+      <module name="Section10" target="11" />
+      <module name="Section3" target="11" />
+      <module name="Section4" target="11" />
+      <module name="Section5" target="11" />
+      <module name="Section6" target="11" />
+      <module name="Section7" target="11" />
+      <module name="Section8" target="11" />
+      <module name="Section9" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

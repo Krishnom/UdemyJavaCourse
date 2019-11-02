@@ -3,6 +3,25 @@
   <component name="EntryPointsManager">
     <pattern value="SecondAndMinuteChallenge.Solution" method="getDurationString" />
   </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/Section3/pom.xml" />
+        <option value="$PROJECT_DIR$/Section4/pom.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/Section5/pom.xml" />
+        <option value="$PROJECT_DIR$/Section6/pom.xml" />
+        <option value="$PROJECT_DIR$/Section7/pom.xml" />
+        <option value="$PROJECT_DIR$/Section8/pom.xml" />
+      </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/Common/pom.xml" />
+        <option value="$PROJECT_DIR$/Section10/pom.xml" />
+      </set>
+    </option>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="false" project-jdk-name="11.0.1" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
