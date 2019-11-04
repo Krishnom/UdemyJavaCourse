@@ -17,6 +17,7 @@ public class TestHelper {
 
     @BeforeEach
     public void setUpStreams() {
+        System.setProperty("line.separator", "\n");
         sysOut = System.out;
         sysIn = System.in;
         System.setOut(new PrintStream(outContent));
@@ -29,7 +30,13 @@ public class TestHelper {
     }
 
     public void assertSysout(String sysout) {
-        Assertions.assertEquals(sysout, outContent.toString().strip());
+        String actualOutput = outContent.toString().strip();
+
+        //making string platform independent. Windows use CRLF(\r\n) as line seperator while linux uses LF(\n)
+        actualOutput = actualOutput.replace("\r\n","\n");
+        sysout = sysout.replace("\r\n","\n");
+
+        Assertions.assertEquals(sysout, actualOutput);
     }
 
     //Before running tests that depends on user input, user must have to set this
@@ -39,4 +46,3 @@ public class TestHelper {
         System.setIn(inputContent);
     }
 }
-
