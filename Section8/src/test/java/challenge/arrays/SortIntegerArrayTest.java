@@ -7,8 +7,8 @@ import static challenge.arrays.SortIntegerArray.printArray;
 public class SortIntegerArrayTest extends TestHelper {
     @Test
     public void arraySortingIsAsExpected() {
-        int[] inputArray = {1, 2, 3, 4, 5};
-        String expectedOutput = "[5, 4, 3, 2, 1]";
+        int[] inputArray = {1, 2, 3, 4, 5, 6};
+        String expectedOutput = "[6, 5, 4, 3, 2, 1]";
 
         SortIntegerArray.sortArray(inputArray);
         printArray(inputArray);
