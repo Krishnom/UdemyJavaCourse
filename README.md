@@ -13,3 +13,4 @@ Course related code
 - Section 6: OOPS Part1: Classes, Constructors and Inheritance.
 - Section 7: OOPS Part2: Composition, Encapsulation and Polymorphism
 - Section 8: Arrays, ArrayList, AutoBoxing and LinkedList
+- Section 9: Abstract Classes, Inner Classes and Interfaces
