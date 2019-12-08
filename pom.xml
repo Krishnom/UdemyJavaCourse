@@ -21,7 +21,6 @@
         <module>Section11</module>
     </modules>
 
-
     <dependencies>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
