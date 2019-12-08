@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/Krishnom/UdemyJavaCourse.svg?branch=master)](https://travis-ci.org/Krishnom/UdemyJavaCourse)
-
+[![Coverage Status](https://coveralls.io/repos/github/Krishnom/UdemyJavaCourse/badge.svg?branch=master)](https://coveralls.io/github/Krishnom/UdemyJavaCourse?branch=master)
 
 # UdemyJavaCourse
 Course related code 
