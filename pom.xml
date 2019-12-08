@@ -17,8 +17,9 @@
         <module>Section7</module>
         <module>Section8</module>
         <module>Section9</module>
+        <module>Section10</module>
+        <module>Section11</module>
     </modules>
-
 
     <dependencies>
         <dependency>
@@ -41,5 +42,7 @@
                 <version>3.0.0-M3</version>
             </plugin>
         </plugins>
+        <sourceDirectory>src/main/java</sourceDirectory>
+        <testSourceDirectory>src/test/java</testSourceDirectory>
     </build>
 </project>

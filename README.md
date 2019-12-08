@@ -14,3 +14,5 @@ Course related code
 - Section 7: OOPS Part2: Composition, Encapsulation and Polymorphism
 - Section 8: Arrays, ArrayList, AutoBoxing and LinkedList
 - Section 9: Abstract Classes, Inner Classes and Interfaces
+- Section 10: Java Generics
+- Section 11: Naming Conventions, Packages, Scope, static keyword and final keyword
