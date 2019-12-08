@@ -41,18 +41,6 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M3</version>
             </plugin>
-
-            <!-- Enable code coverage for repo
-            https://github.com/trautonen/coveralls-maven-plugin
-            -->
-            <plugin>
-                <groupId>org.eluder.coveralls</groupId>
-                <artifactId>coveralls-maven-plugin</artifactId>
-                <version>4.3.0</version>
-                <configuration>
-                    <repoToken>0DFgvu1CWngkIcckynkMEfzXSHTHSmWbr</repoToken>
-                </configuration>
-            </plugin>
         </plugins>
         <sourceDirectory>src/main/java</sourceDirectory>
         <testSourceDirectory>src/test/java</testSourceDirectory>
