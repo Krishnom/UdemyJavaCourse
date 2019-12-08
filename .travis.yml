@@ -1,4 +1,23 @@
+dist: xenial
+
 language: java
 
+sudo: false
+
 jdk:
+  - openjdk8
+  - openjdk10
   - openjdk11
+
+addons:
+  apt:
+    packages:
+      - python-yaml
+
+before_script:
+  - python etc/travis-sonatype.py
+
+script: python etc/travis-build.py --settings ~/.m2/sonatype.xml
+
+after_success:
+  - mvn clean cobertura:cobertura org.eluder.coveralls:coveralls-maven-plugin:report
