@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/Krishnom/UdemyJavaCourse.svg?branch=master)](https://travis-ci.org/Krishnom/UdemyJavaCourse)
-
+[Code Quality](https://www.codacy.com/gh/Krishnom/UdemyJavaCourse?utm_source=github.com&utm_medium=referral&utm_content=Krishnom/UdemyJavaCourse&utm_campaign=Badge_Grade_Dashboard)
 
 # UdemyJavaCourse
 Course related code 
