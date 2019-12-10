@@ -90,9 +90,8 @@ public class LinkedListMain {
                 listIterator.previous();
                 listIterator.add(city);
                 return;
-            } else {
-                //Nothing to do here as we have already moved to next element while comparing the city
-            }
+            }  //Nothing to do here as we have already moved to next element while comparing the city
+
         }
         //If no element is lexicographically greater than the city argument. add in the last
         listIterator.add(city);

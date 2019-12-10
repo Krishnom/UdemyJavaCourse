@@ -4,6 +4,7 @@ public class Main {
     public static void main(String[] args) {
         Car car = getRandomCar();
 
+        assert car != null;
         car.startEngine();
         car.accelerate();
         car.brake();

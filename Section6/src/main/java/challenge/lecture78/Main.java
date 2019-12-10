@@ -5,6 +5,7 @@ public class Main {
     public static void main(String[] args) {
         BankAccount account = new BankAccount();
         account.deposit(29000);
+        account.deposit(23000);
         account.withdraw(15000);
         System.out.println(account.toString());
 

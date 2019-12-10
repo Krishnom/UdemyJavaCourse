@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Bank {
     private final String name;
-    ArrayList<Branch> branches = new ArrayList<Branch>();
+    ArrayList<Branch> branches = new ArrayList<>();
 
     public Bank(String name) {
         this.name = name;
@@ -32,9 +32,9 @@ public class Bank {
     }
 
     private Branch findBranch(String branchName) {
-        for (int i = 0; i < branches.size(); i++) {
-            if (branchName.equals(branches.get(i).getName())) {
-                return branches.get(i);
+        for (Branch branch : branches) {
+            if (branchName.equals(branch.getName())) {
+                return branch;
             }
         }
         return null;
@@ -51,8 +51,7 @@ public class Bank {
     }
 
     public Customer getCustomer(String customerName) {
-        for (int i = 0; i < branches.size(); i++) {
-            Branch branch = branches.get(i);
+        for (Branch branch : branches) {
             if (branch.findCustomer(customerName) != null) {
                 return branch.findCustomer(customerName);
             }
@@ -70,8 +69,8 @@ public class Bank {
     }
 
     public void printCustomerList(boolean showTransactions) {
-        for (int i = 0; i < branches.size(); i++) {
-            branches.get(i).printCustomersList(showTransactions);
+        for (Branch branch : branches) {
+            branch.printCustomersList(showTransactions);
         }
     }
 }

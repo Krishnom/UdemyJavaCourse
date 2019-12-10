@@ -7,11 +7,18 @@ public class SortIntegerArray {
 
     public static void main(String[] args) {
         int[] array = getIntegerArray(5);
+        int[] array2 = getIntegerArray(15);
 
         printArray(array);
         sortArray(array);
-        System.out.println("Sorted array");
+        System.out.println("Sorted array1");
         printArray(array);
+
+        System.out.println("Array 2");
+        printArray(array2);
+        sortArray(array2);
+        System.out.println("Sorted array2");
+        printArray(array2);
     }
 
     //using selection sort

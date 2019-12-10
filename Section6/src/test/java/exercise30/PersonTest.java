@@ -38,13 +38,13 @@ public class PersonTest{
     @Test
     public void fullNameIsFirstNameWhenLastNameIsEmpty() {
         person.setLastName("");
-        assertTrue(person.getFullName().equals(person.getFirstName()));
+        assertEquals(person.getFullName(), person.getFirstName());
     }
 
     @Test
     public void fullNameIsLastNameWhenFirstNameIsEmpty() {
         person.setFirstName("");
-        assertTrue(person.getFullName().equals(person.getLastName()));
+        assertEquals(person.getFullName(), person.getLastName());
     }
 
     @Test

@@ -21,8 +21,7 @@ public class Point {
         //D=√(x2−x1)^2+(y2−y1)^2
         int xFactor = x - this.getX();
         int yFactor = y - this.getY();
-        double distance = Math.sqrt(xFactor * xFactor + yFactor * yFactor);
-        return distance;
+        return Math.sqrt(xFactor * xFactor + yFactor * yFactor);
     }
 
     public double distance() {

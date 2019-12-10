@@ -5,6 +5,18 @@ public class Case {
     private String manufacturer;
     private int power;
 
+    public Dimension getDimension() {
+        return dimension;
+    }
+
+    public String getManufacturer() {
+        return manufacturer;
+    }
+
+    public int getPower() {
+        return power;
+    }
+
     public Case(Dimension dimension, String manufacturer, int power) {
         this.dimension = dimension;
         this.manufacturer = manufacturer;

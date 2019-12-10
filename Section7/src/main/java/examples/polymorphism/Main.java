@@ -3,6 +3,7 @@ package examples.polymorphism;
 public class Main {
     public static void main(String[] args) {
         Movie movie = getRandomMovie();
+        assert movie != null;
         System.out.println("Playing : " + movie.getName());
         movie.plot();
     }

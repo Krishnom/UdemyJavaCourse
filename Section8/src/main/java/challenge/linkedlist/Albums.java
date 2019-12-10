@@ -1,7 +1,6 @@
 package challenge.linkedlist;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.ListIterator;
 
@@ -32,10 +31,9 @@ public class Albums {
     }
 
     public boolean addSong(Song song) {
-        Iterator<Song> songIterator = songs.iterator();
 
-        while (songIterator.hasNext()) {
-            if (songIterator.next().getTitle().equals(song.getTitle())) {
+        for (Song value : songs) {
+            if (value.getTitle().equals(song.getTitle())) {
                 return false;
             }
         }

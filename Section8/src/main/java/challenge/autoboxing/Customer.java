@@ -51,8 +51,8 @@ public class Customer {
     }
 
     public void printTransactions() {
-        for (int i = 0; i < transactions.size(); i++) {
-            System.out.println(transactions.get(i));
+        for (Double transaction : transactions) {
+            System.out.println(transaction);
         }
     }
 

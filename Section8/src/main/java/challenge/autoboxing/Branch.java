@@ -4,13 +4,13 @@ import java.util.ArrayList;
 
 public class Branch {
     private String name;
-    private ArrayList<Customer> customers = new ArrayList<Customer>();
+    private ArrayList<Customer> customers;
     private String location;
 
     public Branch(String name, String location) {
         this.name = name;
         this.location = location;
-        customers = new ArrayList<Customer>();
+        customers = new ArrayList<>();
     }
 
     @Override
@@ -51,9 +51,9 @@ public class Branch {
     }
 
     public Customer findCustomer(String customerName) {
-        for (int i = 0; i < customers.size(); i++) {
-            if (customerName.equals(customers.get(i).getName())) {
-                return customers.get(i);
+        for (Customer customer : customers) {
+            if (customerName.equals(customer.getName())) {
+                return customer;
             }
         }
         return null;

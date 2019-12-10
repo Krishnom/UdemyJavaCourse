@@ -14,7 +14,7 @@ public class Printer {
     }
 
     public void printPage(int pages) {
-        int pagesNeeded = pages;
+        int pagesNeeded;
 
         if (tonerLevel < (double) pages * perPageTonerCost) {
             System.out.println("Replace toner to print pages");

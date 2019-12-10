@@ -11,10 +11,8 @@ class LeapYear {
             leapYear = false;
         }else if(divisibleBy4 && !divisibleBy100){
             leapYear = true;
-        }else if(divisibleBy400){
-            leapYear = true;
-        }else{
-            leapYear = false;
+        } else {
+            leapYear = divisibleBy400;
         }
 
         return leapYear;

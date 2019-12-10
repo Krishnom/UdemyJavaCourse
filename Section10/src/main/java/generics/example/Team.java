@@ -75,12 +75,6 @@ public class Team<T extends Player> implements Comparable<Team<T>> {
     @Override
     public int compareTo(Team<T> opponentTeam) {
 
-        if (this.getRanking() > opponentTeam.getRanking()) {
-            return -1;
-        } else if (this.getRanking() < opponentTeam.getRanking()) {
-            return 1;
-        } else {
-            return 0;
-        }
+        return Integer.compare(opponentTeam.getRanking(), this.getRanking());
     }
 }

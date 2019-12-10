@@ -32,8 +32,8 @@ public class LeagueImplMain {
             }
 
             System.out.println("Match #" + match);
-            Team team1 = worldCupLeague.getTeam(team1Code);
-            Team team2 = worldCupLeague.getTeam(team2Code);
+            Team<CricketPlayer> team1 = worldCupLeague.getTeam(team1Code);
+            Team<CricketPlayer> team2 = worldCupLeague.getTeam(team2Code);
 
             int team1Score = (int) (Math.random() * 400);
             int team2Score = (int) (Math.random() * 400);

@@ -57,7 +57,6 @@ public class SearchTree implements NodeList {
     public void traverse() {
         if(root == null) {
             System.out.println("Tree is empty");
-            return;
         }else{
             traverse(root);
         }

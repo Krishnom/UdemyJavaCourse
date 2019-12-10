@@ -54,8 +54,7 @@ public class Mobile {
     }
 
     private Contact findContact(String name) {
-        for (int i = 0; i < contacts.size(); i++) {
-            Contact contact = contacts.get(i);
+        for (Contact contact : contacts) {
             if (contact.getName().equals(name)) {
                 return contact;
             }
@@ -67,8 +66,8 @@ public class Mobile {
         System.out.println("---------------------------------------");
         System.out.println("My contact list");
         System.out.println(self.toString());
-        for (int i = 0; i < contacts.size(); i++) {
-            System.out.println(contacts.get(i).toString());
+        for (Contact contact : contacts) {
+            System.out.println(contact.toString());
         }
     }
 }

@@ -6,15 +6,11 @@ public class Person {
     private String lastName;
 
     public boolean isTeen() {
-        if (age < 20 && age > 12) {
-            return true;
-        } else {
-            return false;
-        }
+        return age < 20 && age > 12;
     }
 
     public String getFullName() {
-        String name = "";
+        String name;
         if (firstName.isEmpty() && lastName.isEmpty()) {
             name = "";
         } else if (firstName.isEmpty()) {

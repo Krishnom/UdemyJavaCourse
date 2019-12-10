@@ -10,14 +10,14 @@ class TeamTest {
 
     @Test
     void cricketPlayerIsAbleToJoinCricketTeam() {
-        Team<CricketPlayer> cricketPlayerTeam = new Team("Cricket Team");
+        Team<CricketPlayer> cricketPlayerTeam = new Team<>("Cricket Team");
         cricketPlayerTeam.addPlayer(new CricketPlayer("A Cricket Player"));
     }
 
     @Test
     void teamWithHighestRankingWins() {
-        Team<CricketPlayer> cricketPlayerTeamA = new Team("Cricket Team A");
-        Team<CricketPlayer> cricketPlayerTeamB = new Team("Cricket Team B");
+        Team<CricketPlayer> cricketPlayerTeamA = new Team<>("Cricket Team A");
+        Team<CricketPlayer> cricketPlayerTeamB = new Team<>("Cricket Team B");
         cricketPlayerTeamA.matchResults(cricketPlayerTeamB, 340, 330); //A wins
         cricketPlayerTeamA.matchResults(cricketPlayerTeamB, 330, 330); //Draw
         //A will win with 2 points
@@ -26,8 +26,8 @@ class TeamTest {
 
     @Test
     void everyWinGivesPointsToWinningTeam() {
-        Team<CricketPlayer> cricketPlayerTeamA = new Team("Cricket Team A");
-        Team<CricketPlayer> cricketPlayerTeamB = new Team("Cricket Team B");
+        Team<CricketPlayer> cricketPlayerTeamA = new Team<>("Cricket Team A");
+        Team<CricketPlayer> cricketPlayerTeamB = new Team<>("Cricket Team B");
         cricketPlayerTeamA.matchResults(cricketPlayerTeamB, 340, 330); //A wins
         //A will win with WINNING_PONTS points
         assertEquals(WINNING_POINTS, cricketPlayerTeamA.getPoints());

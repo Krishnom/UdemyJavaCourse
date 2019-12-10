@@ -19,6 +19,7 @@
         <module>Section9</module>
         <module>Section10</module>
         <module>Section11</module>
+        <module>Section12</module>
     </modules>
 
     <dependencies>

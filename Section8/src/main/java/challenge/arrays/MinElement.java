@@ -27,9 +27,9 @@ public class MinElement {
     static int findMin(int[] array) {
         int min = Integer.MAX_VALUE;
 
-        for (int i = 0; i < array.length; i++) {
-            if (min > array[i]) {
-                min = array[i];
+        for (int value : array) {
+            if (min > value) {
+                min = value;
             }
         }
         return min;

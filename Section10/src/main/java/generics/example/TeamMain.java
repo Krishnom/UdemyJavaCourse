@@ -57,7 +57,7 @@ public class TeamMain {
 
     private static void announceWinner(Team team1, Team team2) {
         int results = team1.compareTo(team2);
-        if (results == 1) {
+        if (results > 0) {
             System.out.println(team2.getName() + " Wins the series");
         } else if (results == -1) {
             System.out.println(team1.getName() + " Wins the series");

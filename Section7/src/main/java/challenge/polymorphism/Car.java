@@ -2,10 +2,30 @@ package challenge.polymorphism;
 
 public class Car {
     protected String engine;
-    String model;
+    private String model;
     private int wheels;
     private int cylinders;
     private String name;
+
+    public String getEngine() {
+        return engine;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public int getWheels() {
+        return wheels;
+    }
+
+    public int getCylinders() {
+        return cylinders;
+    }
+
+    public String getName() {
+        return name;
+    }
 
     public Car(int cylinders, String name) {
         this.cylinders = cylinders;

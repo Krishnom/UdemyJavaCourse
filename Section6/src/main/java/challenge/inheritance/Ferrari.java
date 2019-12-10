@@ -14,11 +14,11 @@ public class Ferrari extends Car {
         if (newVelocity <= 0) {
             stop();
             changeGear(0);
-        } else if (newVelocity > 0 && newVelocity < 10) {
+        } else if (newVelocity < 10) {
             changeGear(1);
-        } else if (newVelocity >= 10 && newVelocity < 30) {
+        } else if (newVelocity < 30) {
             changeGear(2);
-        } else if (newVelocity >= 30 && newVelocity < 60) {
+        } else if (newVelocity < 60) {
             changeGear(3);
         } else if (newVelocity > 60 && newVelocity < 90) {
             changeGear(4);

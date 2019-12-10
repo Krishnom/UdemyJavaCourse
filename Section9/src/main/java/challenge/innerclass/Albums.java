@@ -56,7 +56,7 @@ public class Albums {
         }
     }
 
-    private class SongList {
+    private static class SongList {
         private ArrayList<Song> songs = new ArrayList<>();
 
         private int getSize() {

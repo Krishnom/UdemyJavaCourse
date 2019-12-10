@@ -144,7 +144,7 @@ public class MyLinkedList implements NodeList {
         StringBuilder printValue = new StringBuilder();
         printValue.append("[");
         while(currentItem.next() != null){
-            printValue.append(currentItem.getValue()+",");
+            printValue.append(currentItem.getValue()).append(",");
             currentItem = currentItem.next();
         }
 

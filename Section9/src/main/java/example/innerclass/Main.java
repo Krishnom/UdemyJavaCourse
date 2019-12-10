@@ -7,12 +7,7 @@ public class Main {
     static Button button = new Button("Print");
 
     public static void main(String[] args) {
-        button.setOnClickListener(new Button.OnClickListener() {
-            @Override
-            public void onClick(String title) {
-                System.out.println(title + " button clicked");
-            }
-        });
+        button.setOnClickListener(title -> System.out.println(title + " button clicked"));
 
         start();
     }
