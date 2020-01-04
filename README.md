@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.org/Krishnom/UdemyJavaCourse.svg?branch=master)](https://travis-ci.org/Krishnom/UdemyJavaCourse)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/4cbe076de2f343af805b39540cebebdf)](https://www.codacy.com/gh/Krishnom/UdemyJavaCourse?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Krishnom/UdemyJavaCourse&amp;utm_campaign=Badge_Grade)
+
+[![Coverage Status](https://coveralls.io/repos/github/Krishnom/UdemyJavaCourse/badge.svg?branch=master)](https://coveralls.io/github/Krishnom/UdemyJavaCourse?branch=master)
 
 # UdemyJavaCourse
 Course related code 
