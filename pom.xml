@@ -20,6 +20,7 @@
         <module>Section10</module>
         <module>Section11</module>
         <module>Section12</module>
+        <module>Section11Challenge</module>
     </modules>
 
     <dependencies>
