@@ -19,8 +19,9 @@
         <module>Section9</module>
         <module>Section10</module>
         <module>Section11</module>
-        <module>Section12</module>
         <module>Section11Challenge</module>
+        <module>Section12</module>
+        <module>Section13</module>
     </modules>
 
     <dependencies>

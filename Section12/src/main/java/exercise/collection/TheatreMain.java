@@ -10,7 +10,7 @@ public class TheatreMain {
         theatre.reserveSeat("A02");
         theatre.reserveSeat("H12");
         theatre.reserveSeat("J12");
-//        theatre.reserveSeat("K-12"); //Invalid seat
+        theatre.reserveSeat("K-12"); //Invalid seat
 
         theatre.cancelSeat("A10");
         //try to cancel seat that is not reserved
